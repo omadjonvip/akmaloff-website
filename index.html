@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz-Cyrl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,249 +13,130 @@
 
 <style>
 :root{
-  --green:#20382a;
-  --green-2:#304d38;
-  --green-3:#426047;
-  --gold:#c7a064;
-  --gold-light:#ead5ad;
-  --cream:#f7f6f1;
-  --ink:#242a25;
-  --muted:#727872;
-  --line:#e8e5dc;
-  --white:#fff;
+  --green:#20382a;--green-2:#304d38;--gold:#c7a064;
+  --gold-light:#ead5ad;--cream:#f7f6f1;--ink:#242a25;
+  --muted:#727872;--line:#e8e5dc;--white:#fff;
   --shadow:0 12px 35px rgba(27,45,32,.09);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:110px}
-body{
-  font-family:"Manrope","Noto Sans",Arial,sans-serif;
-  color:var(--ink);background:var(--white);
-  -webkit-font-smoothing:antialiased;
-}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{font-family:"Manrope","Noto Sans",Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
-img{max-width:100%}
+button{font:inherit}
 .container{width:min(1160px,88%);margin:0 auto}
 
 /* HEADER */
-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.97);
-  box-shadow:0 3px 18px rgba(0,0,0,.055);
-  backdrop-filter:blur(12px);
-}
-.header-inner{
-  width:min(1200px,92%);margin:auto;
-  min-height:108px;padding:13px 0;
-  display:flex;align-items:center;justify-content:space-between;gap:28px;
-}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);box-shadow:0 3px 18px rgba(0,0,0,.055);backdrop-filter:blur(12px)}
+.header-inner{width:min(1240px,94%);margin:auto;min-height:104px;padding:12px 0;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;flex:0 0 auto}
-.brand img{display:block;width:160px;height:auto;object-fit:contain}
-nav{
-  display:flex;align-items:center;justify-content:flex-end;
-  gap:9px;flex-wrap:wrap;
-}
-nav a{
-  display:inline-flex;align-items:center;justify-content:center;
-  min-height:42px;padding:10px 15px;
-  border:1px solid #e7e2d6;border-radius:9px;
-  color:#29392e;background:#fff;
-  font-family:"Manrope","Noto Sans",sans-serif;
-  font-size:13px;font-weight:800;letter-spacing:.1px;
-  white-space:nowrap;transition:all .2s ease;
-}
-nav a:hover,nav a:focus-visible{
-  color:var(--green);border-color:var(--gold);
-  background:#fbf7ee;box-shadow:0 4px 12px rgba(199,160,100,.15);
-  outline:none;
-}
+.brand img{display:block;width:155px;height:auto;object-fit:contain}
+.header-right{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap}
+nav{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+nav a{display:inline-flex;align-items:center;justify-content:center;min-height:41px;padding:9px 13px;border:1px solid #e7e2d6;border-radius:9px;color:#29392e;background:#fff;font-size:12px;font-weight:800;white-space:nowrap;transition:all .2s ease}
+nav a:hover,nav a:focus-visible{color:var(--green);border-color:var(--gold);background:#fbf7ee;outline:none}
+.language-switch{display:flex;align-items:center;gap:5px;padding:4px;border:1px solid #e7e2d6;border-radius:10px;background:#fbfaf7}
+.language-switch button{min-width:37px;min-height:32px;padding:6px 8px;border:1px solid transparent;border-radius:7px;background:transparent;color:#536055;font-size:11px;font-weight:800;cursor:pointer;transition:.2s}
+.language-switch button:hover{border-color:#d9c8a8}
+.language-switch button.active{background:var(--green);color:#fff;border-color:var(--green)}
 
 /* HERO */
-.hero{
-  position:relative;overflow:hidden;color:#fff;
-  background:linear-gradient(112deg,#172d21 0%,#294632 58%,#405e43 100%);
-  min-height:570px;display:flex;align-items:center;
-  padding:86px 0;
-}
-.hero:before{
-  content:"";position:absolute;width:570px;height:570px;
-  border:1px solid rgba(255,255,255,.18);border-radius:50%;
-  right:-115px;top:35px;
-}
-.hero:after{
-  content:"";position:absolute;width:390px;height:390px;
-  border:1px solid rgba(234,213,173,.18);border-radius:50%;
-  right:0;top:125px;
-}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(112deg,#172d21 0%,#294632 58%,#405e43 100%);min-height:555px;display:flex;align-items:center;padding:82px 0}
+.hero:before{content:"";position:absolute;width:570px;height:570px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-115px;top:35px}
+.hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(234,213,173,.18);border-radius:50%;right:0;top:125px}
 .hero-content{position:relative;z-index:1;max-width:720px}
-.eyebrow{
-  color:var(--gold-light);font-size:13px;font-weight:800;
-  letter-spacing:5px;margin-bottom:24px;
-}
-h1{
-  font-family:"Noto Sans","Manrope",sans-serif;
-  font-size:clamp(42px,6vw,72px);font-weight:800;
-  line-height:1.13;letter-spacing:-1.8px;margin-bottom:24px;
-}
+.eyebrow{color:var(--gold-light);font-size:13px;font-weight:800;letter-spacing:5px;margin-bottom:24px}
+h1{font-family:"Noto Sans","Manrope",sans-serif;font-size:clamp(42px,6vw,72px);font-weight:800;line-height:1.13;letter-spacing:-1.8px;margin-bottom:24px}
 .hero p{font-size:18px;line-height:1.9;color:#e4e9e3;max-width:610px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  margin-top:32px;padding:16px 29px;border-radius:9px;
-  background:var(--gold);color:#fff;font-weight:800;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);transition:.2s;
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;margin-top:32px;padding:16px 29px;border:0;border-radius:9px;background:var(--gold);color:#fff;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.12);transition:.2s}
 .btn:hover{background:#b68c50;transform:translateY(-2px)}
 
 /* SECTIONS */
-section{padding:86px 0}
+section{padding:82px 0}
 .about{background:var(--cream);text-align:center}
-.section-title{
-  color:#293d2e;font-family:"Noto Sans","Manrope",sans-serif;
-  font-size:clamp(28px,4vw,38px);font-weight:800;
-  line-height:1.25;margin-bottom:15px;
-}
-.section-desc{
-  color:var(--muted);font-size:16px;line-height:1.8;
-  max-width:720px;margin:0 auto 38px;text-align:center;
-}
-.about-text{
-  max-width:850px;margin:auto;color:#555f57;
-  font-size:16px;line-height:2;
-}
+.section-title{color:#293d2e;font-family:"Noto Sans","Manrope",sans-serif;font-size:clamp(28px,4vw,38px);font-weight:800;line-height:1.25;margin-bottom:15px}
+.section-desc{color:var(--muted);font-size:16px;line-height:1.8;max-width:760px;margin:0 auto 38px;text-align:center}
+.about-text{max-width:850px;margin:auto;color:#555f57;font-size:16px;line-height:2}
 
 /* PRODUCTS */
 .products-section{background:#fff}
-.products{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:22px;
-}
-.product{
-  overflow:hidden;border:1px solid var(--line);border-radius:14px;
-  background:#fff;text-align:center;box-shadow:0 5px 18px rgba(0,0,0,.035);
-  transition:transform .22s ease,box-shadow .22s ease;
-}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.product{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center;box-shadow:0 5px 18px rgba(0,0,0,.035);transition:transform .22s ease,box-shadow .22s ease}
 .product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.product-visual{
-  min-height:185px;padding:24px 16px;
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:10px;
-  background:linear-gradient(145deg,#f2efe5,#e2e8dc);
-  color:var(--green);
-}
-.product-mark{
-  width:66px;height:66px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  border:1px solid rgba(48,77,56,.2);
-  color:var(--green-2);font-size:25px;font-weight:800;
-  background:rgba(255,255,255,.58);
-}
-.product-visual small{
-  color:#758071;font-size:10px;font-weight:800;letter-spacing:3px;
-}
-.product h3{
-  padding:19px 14px 7px;color:#2b4030;
-  font-size:17px;font-weight:800;line-height:1.4;
-}
-.product p{padding:0 16px 22px;color:#7b817b;font-size:13px;line-height:1.65}
-.product-number{
-  display:inline-block;margin-top:3px;padding:5px 10px;
-  border-radius:20px;background:#f7f4ec;color:#967344;
-  font-size:10px;font-weight:800;letter-spacing:1px;
-}
+.product-visual{min-height:185px;padding:24px 16px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f2efe5,#e2e8dc);color:var(--green)}
+.product-mark{width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(48,77,56,.2);color:var(--green-2);font-size:25px;font-weight:800;background:rgba(255,255,255,.58)}
+.product-visual small{color:#758071;font-size:10px;font-weight:800;letter-spacing:3px}
+.product h3{padding:19px 14px 7px;color:#2b4030;font-size:16px;font-weight:800;line-height:1.45}
+.product p{padding:0 16px 22px;color:#7b817b;font-size:13px;line-height:1.65;min-height:44px}
+.product-number{display:inline-block;margin:0 0 16px;padding:5px 10px;border-radius:20px;background:#f7f4ec;color:#967344;font-size:10px;font-weight:800;letter-spacing:1px}
 
 /* QUALITY */
 .quality{background:var(--green);color:#fff}
 .quality .section-title{color:#fff}
 .quality .section-desc{color:#d5ddd5}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.feature{
-  padding:30px 24px;text-align:center;
-  border:1px solid rgba(255,255,255,.2);border-radius:13px;
-  background:rgba(255,255,255,.035);
-}
+.feature{padding:30px 24px;text-align:center;border:1px solid rgba(255,255,255,.2);border-radius:13px;background:rgba(255,255,255,.035)}
 .feature h3{color:var(--gold-light);font-size:17px;margin-bottom:12px}
 .feature p{font-size:14px;line-height:1.8;color:#dce2dc}
-
-/* PARTNER + CONTACT */
 .partner{background:var(--cream);text-align:center}
-.partner h2{
-  color:#293d2e;font-family:"Noto Sans",sans-serif;
-  font-size:clamp(27px,4vw,36px);margin-bottom:14px;
-}
+.partner h2{color:#293d2e;font-family:"Noto Sans",sans-serif;font-size:clamp(27px,4vw,36px);margin-bottom:14px}
 .partner p{color:var(--muted);line-height:1.8}
 .contact{background:#fff}
-.contact-grid{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:22px;max-width:900px;margin:auto;
-}
-.contact-box{
-  background:var(--cream);padding:28px;border-radius:12px;
-  border:1px solid var(--line);
-}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin:auto}
+.contact-box{background:var(--cream);padding:28px;border-radius:12px;border:1px solid var(--line)}
 .contact-box h3{color:#293d2e;margin-bottom:13px}
 .contact-box p{color:#667067;line-height:2;font-size:14px}
-footer{
-  background:#17271d;color:#dce3dc;text-align:center;
-  padding:30px 15px;font-size:13px;line-height:2;
-}
+footer{background:#17271d;color:#dce3dc;text-align:center;padding:30px 15px;font-size:13px;line-height:2}
 footer strong{color:var(--gold-light);letter-spacing:1px}
 
 /* TABLET */
-@media(max-width:900px){
-  .header-inner{gap:16px}
-  .brand img{width:145px}
-  nav{gap:6px}
-  nav a{padding:9px 11px;font-size:12px}
+@media(max-width:1000px){
+  .header-inner{width:94%;gap:12px}
+  .brand img{width:135px}
+  .header-right{gap:8px}
+  nav{gap:5px}
+  nav a{padding:8px 10px;font-size:11px}
+  .language-switch{gap:2px}
+  .language-switch button{min-width:33px;padding:5px}
   .products{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-
-/* MOBILE: logo remains prominent; menu becomes 2x2 framed buttons */
+@media(min-width:601px) and (max-width:800px){
+  .header-inner{flex-direction:column;justify-content:center;gap:10px;padding:12px 0}
+  .brand img{width:130px}
+  .header-right{justify-content:center}
+}
+/* MOBILE */
 @media(max-width:600px){
-  html{scroll-padding-top:145px}
-  .header-inner{
-    width:92%;min-height:0;padding:12px 0 13px;
-    display:flex;flex-direction:column;align-items:center;gap:12px;
-  }
-  .brand img{width:148px;max-width:48vw}
-  nav{
-    width:100%;display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:7px;
-  }
-  nav a{
-    width:100%;min-height:39px;padding:8px 5px;
-    border:1px solid #d9c8a8;border-radius:8px;
-    background:#fffdf8;color:#2c4031;
-    font-size:12px;font-weight:800;letter-spacing:.15px;
-    box-shadow:0 2px 5px rgba(32,56,42,.045);
-  }
-  nav a:active{background:#f5eddf;border-color:var(--gold)}
-  .hero{min-height:485px;padding:66px 0}
+  html{scroll-padding-top:190px}
+  .header-inner{width:92%;min-height:0;padding:11px 0 12px;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .brand img{width:142px;max-width:48vw}
+  .header-right{width:100%;display:flex;flex-direction:column;gap:9px}
+  nav{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  nav a{width:100%;min-height:38px;padding:8px 5px;border:1px solid #d9c8a8;border-radius:8px;background:#fffdf8;color:#2c4031;font-size:12px;font-weight:800}
+  .language-switch{justify-content:center;gap:6px;padding:3px}
+  .language-switch button{min-width:43px;min-height:30px;font-size:11px}
+  .hero{min-height:470px;padding:62px 0}
   .hero:before{width:410px;height:410px;right:-220px;top:55px}
   .hero:after{width:290px;height:290px;right:-150px;top:115px}
   .eyebrow{font-size:11px;letter-spacing:4px;margin-bottom:19px}
-  h1{font-size:clamp(37px,10vw,48px);letter-spacing:-1px;line-height:1.18}
+  h1{font-size:clamp(36px,9.5vw,47px);letter-spacing:-1px;line-height:1.18}
   .hero p{font-size:15px;line-height:1.85}
   .btn{padding:14px 23px;font-size:14px}
-  section{padding:62px 0}
+  section{padding:60px 0}
   .container{width:88%}
   .section-desc{font-size:14px;margin-bottom:28px}
   .about-text{font-size:14px;line-height:1.9}
   .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .product{border-radius:11px}
-  .product-visual{min-height:135px;padding:14px 8px;gap:7px}
+  .product-visual{min-height:130px;padding:14px 8px;gap:7px}
   .product-mark{width:52px;height:52px;font-size:20px}
   .product-visual small{font-size:8px;letter-spacing:2px}
-  .product h3{font-size:13px;padding:14px 8px 6px}
-  .product p{font-size:11px;padding:0 9px 16px}
-  .product-number{font-size:9px}
+  .product h3{font-size:12px;padding:13px 8px 6px}
+  .product p{font-size:11px;padding:0 9px 12px;min-height:43px}
+  .product-number{margin-bottom:13px}
   .features{grid-template-columns:1fr;gap:12px}
   .feature{padding:23px 18px}
   .contact-grid{grid-template-columns:1fr;gap:13px}
   .contact-box{padding:22px}
-}
-@media(min-width:601px) and (max-width:760px){
-  .header-inner{flex-direction:column;justify-content:center;padding:14px 0;gap:12px}
-  nav{justify-content:center}
 }
 </style>
 </head>
@@ -263,15 +144,23 @@ footer strong{color:var(--gold-light);letter-spacing:1px}
 <body>
 <header>
   <div class="header-inner">
-    <a class="brand" href="#" aria-label="AKMALOFF бош саҳифа">
-      <img src="13E0B6BA-2A9F-4248-9340-2F3BB1A96252.png" alt="AKMALOFF логотипи">
+    <a class="brand" href="#" aria-label="AKMALOFF home">
+      <img src="13E0B6BA-2A9F-4248-9340-2F3BB1A96252.png" alt="AKMALOFF logo">
     </a>
-    <nav aria-label="Асосий меню">
-      <a href="#about">Компания</a>
-      <a href="#products">Продукция</a>
-      <a href="#quality">Качество</a>
-      <a href="#contact">Контакт</a>
-    </nav>
+    <div class="header-right">
+      <nav aria-label="Main navigation">
+        <a href="#about" data-i18n="nav_about">Компания</a>
+        <a href="#products" data-i18n="nav_products">Продукция</a>
+        <a href="#quality" data-i18n="nav_quality">Качество</a>
+        <a href="#contact" data-i18n="nav_contact">Контакт</a>
+      </nav>
+      <div class="language-switch" aria-label="Choose language">
+        <button type="button" data-lang="uz-Cyrl" class="active" aria-label="O‘zbekcha kirill">ЎЗ</button>
+        <button type="button" data-lang="uz-Latn" aria-label="O‘zbekcha lotin">O‘Z</button>
+        <button type="button" data-lang="ru" aria-label="Русский">RU</button>
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -279,106 +168,66 @@ footer strong{color:var(--gold-light);letter-spacing:1px}
   <section class="hero">
     <div class="container hero-content">
       <div class="eyebrow">AKMALOFF PRODUCT</div>
-      <h1>Сифатли маҳсулот.<br>Ишончли танлов.</h1>
-      <p>Дон маҳсулотлари асосида тайёрланган сифатли озиқ-овқат маҳсулотлари. Ҳар бир оила дастурхони учун меҳр ва эътибор билан.</p>
-      <a class="btn" href="#products">Маҳсулотларимиз</a>
+      <h1 data-i18n="hero_title">Сифатли маҳсулот.<br>Ишончли танлов.</h1>
+      <p data-i18n="hero_text">Дон маҳсулотлари асосида тайёрланган сифатли озиқ-овқат маҳсулотлари. Ҳар бир оила дастурхони учун меҳр ва эътибор билан.</p>
+      <a class="btn" href="#products" data-i18n="hero_button">Маҳсулотларимиз</a>
     </div>
   </section>
 
   <section class="about" id="about">
     <div class="container">
-      <h2 class="section-title">Компания ҳақида</h2>
-      <p class="section-desc">AKMALOFF PRODUCT — сифат, ишонч ва ривожланиш сари.</p>
-      <div class="about-text">
-        Биз истеъмолчилар учун дон ва озиқ-овқат маҳсулотларини ишлаб чиқарамиз.
-        Мақсадимиз — сифатли маҳсулотларимизни Ўзбекистон ва халқаро бозорларда тақдим этиш ҳамда ишончли ҳамкорликни ривожлантириш.
-      </div>
+      <h2 class="section-title" data-i18n="about_title">Компания ҳақида</h2>
+      <p class="section-desc" data-i18n="about_desc">AKMALOFF PRODUCT — сифат, ишонч ва ривожланиш сари.</p>
+      <div class="about-text" data-i18n="about_text">Биз истеъмолчилар учун дон ва озиқ-овқат маҳсулотларини ишлаб чиқарамиз. Мақсадимиз — сифатли маҳсулотларимизни Ўзбекистон ва халқаро бозорларда тақдим этиш ҳамда ишончли ҳамкорликни ривожлантириш.</div>
     </div>
   </section>
 
   <section class="products-section" id="products">
     <div class="container">
-      <h2 class="section-title" style="text-align:center">Бизнинг маҳсулотлар</h2>
-      <p class="section-desc">AKMALOFF бренди остидаги 10 хил маҳсулотимиз билан танишинг.</p>
-
+      <h2 class="section-title" style="text-align:center" data-i18n="products_title">Бизнинг маҳсулотлар</h2>
+      <p class="section-desc" data-i18n="products_desc">AKMALOFF бренди остидаги 10 хил маҳсулотимиз билан танишинг.</p>
       <div class="products">
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div>
-          <h3>МАША-КАША — қизил буғдойли</h3><p>Буғдой асосидаги каша</p><span class="product-number">01</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div>
-          <h3>МАША-КАША — сариқ буғдойли</h3><p>Буғдой асосидаги каша</p><span class="product-number">02</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div>
-          <h3>МАША-КАША — гуручли</h3><p>Гуруч асосидаги каша</p><span class="product-number">03</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">B</div><small>AKMALOFF</small></div>
-          <h3>BUNNY — буғдойли каша</h3><p>Донли каша маҳсулоти</p><span class="product-number">04</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">B</div><small>AKMALOFF</small></div>
-          <h3>BUNNY — гуручли каша</h3><p>Донли каша маҳсулоти</p><span class="product-number">05</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">Қ</div><small>AKMALOFF</small></div>
-          <h3>ОЙИЖОНИМ ҚУЙМОҒИ</h3><p>Қуймоқ тайёрлаш учун аралашма</p><span class="product-number">06</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">Г</div><small>AKMALOFF</small></div>
-          <h3>ГЕРКУЛЕС — қизил</h3><p>Сули ёрмаси маҳсулоти</p><span class="product-number">07</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">Г</div><small>AKMALOFF</small></div>
-          <h3>ГЕРКУЛЕС — кўк</h3><p>Сули ёрмаси маҳсулоти</p><span class="product-number">08</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">Б</div><small>AKMALOFF</small></div>
-          <h3>БОГАТЫРЬ</h3><p>Дон маҳсулоти</p><span class="product-number">09</span>
-        </article>
-        <article class="product">
-          <div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div>
-          <h3>МАННАЯ</h3><p>Манний ёрмаси</p><span class="product-number">10</span>
-        </article>
+        <article class="product"><div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div><h3 data-i18n="p1_title">МАША-КАША — қизил буғдойли</h3><p data-i18n="p1_desc">Буғдой асосидаги каша</p><span class="product-number">01</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div><h3 data-i18n="p2_title">МАША-КАША — сариқ буғдойли</h3><p data-i18n="p2_desc">Буғдой асосидаги каша</p><span class="product-number">02</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div><h3 data-i18n="p3_title">МАША-КАША — гуручли</h3><p data-i18n="p3_desc">Гуруч асосидаги каша</p><span class="product-number">03</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">B</div><small>AKMALOFF</small></div><h3 data-i18n="p4_title">BUNNY — буғдойли каша</h3><p data-i18n="p4_desc">Донли каша маҳсулоти</p><span class="product-number">04</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">B</div><small>AKMALOFF</small></div><h3 data-i18n="p5_title">BUNNY — гуручли каша</h3><p data-i18n="p5_desc">Донли каша маҳсулоти</p><span class="product-number">05</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">Қ</div><small>AKMALOFF</small></div><h3 data-i18n="p6_title">ОЙИЖОНИМ ҚУЙМОҒИ</h3><p data-i18n="p6_desc">Қуймоқ тайёрлаш учун аралашма</p><span class="product-number">06</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">Г</div><small>AKMALOFF</small></div><h3 data-i18n="p7_title">ГЕРКУЛЕС — қизил</h3><p data-i18n="p7_desc">Сули ёрмаси маҳсулоти</p><span class="product-number">07</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">Г</div><small>AKMALOFF</small></div><h3 data-i18n="p8_title">ГЕРКУЛЕС — кўк</h3><p data-i18n="p8_desc">Сули ёрмаси маҳсулоти</p><span class="product-number">08</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">Б</div><small>AKMALOFF</small></div><h3 data-i18n="p9_title">БОГАТЫРЬ</h3><p data-i18n="p9_desc">Дон маҳсулоти</p><span class="product-number">09</span></article>
+        <article class="product"><div class="product-visual"><div class="product-mark">М</div><small>AKMALOFF</small></div><h3 data-i18n="p10_title">МАННАЯ</h3><p data-i18n="p10_desc">Манний ёрмаси</p><span class="product-number">10</span></article>
       </div>
     </div>
   </section>
 
   <section class="quality" id="quality">
     <div class="container">
-      <h2 class="section-title" style="text-align:center">Нима учун AKMALOFF?</h2>
-      <p class="section-desc">Ҳар бир маҳсулотимизда сифат ва ишончга эътибор.</p>
+      <h2 class="section-title" style="text-align:center" data-i18n="quality_title">Нима учун AKMALOFF?</h2>
+      <p class="section-desc" data-i18n="quality_desc">Ҳар бир маҳсулотимизда сифат ва ишончга эътибор.</p>
       <div class="features">
-        <div class="feature"><h3>СИФАТ</h3><p>Маҳсулотлар сифатини назорат қилишга алоҳида эътибор.</p></div>
-        <div class="feature"><h3>ИШОНЧ</h3><p>Мижозлар ва ҳамкорлар билан узоқ муддатли муносабатлар.</p></div>
-        <div class="feature"><h3>РИВОЖЛАНИШ</h3><p>Янги бозорлар ва имкониятлар сари ҳаракат.</p></div>
+        <div class="feature"><h3 data-i18n="quality_1_title">СИФАТ</h3><p data-i18n="quality_1_text">Маҳсулотлар сифатини назорат қилишга алоҳида эътибор.</p></div>
+        <div class="feature"><h3 data-i18n="quality_2_title">ИШОНЧ</h3><p data-i18n="quality_2_text">Мижозлар ва ҳамкорлар билан узоқ муддатли муносабатлар.</p></div>
+        <div class="feature"><h3 data-i18n="quality_3_title">РИВОЖЛАНИШ</h3><p data-i18n="quality_3_text">Янги бозорлар ва имкониятлар сари ҳаракат.</p></div>
       </div>
     </div>
   </section>
 
   <section class="partner">
     <div class="container">
-      <h2>Бизнинг ҳамкоримиз бўлинг!</h2>
-      <p>Дистрибьюторлар ва улгуржи харидорларни ҳамкорликка таклиф қиламиз.</p>
-      <a class="btn" href="#contact">Биз билан боғланинг</a>
+      <h2 data-i18n="partner_title">Бизнинг ҳамкоримиз бўлинг!</h2>
+      <p data-i18n="partner_text">Дистрибьюторлар ва улгуржи харидорларни ҳамкорликка таклиф қиламиз.</p>
+      <a class="btn" href="#contact" data-i18n="partner_button">Биз билан боғланинг</a>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="container">
-      <h2 class="section-title" style="text-align:center">Алоқа</h2>
-      <p class="section-desc">Ҳамкорлик ва саволлар бўйича бизга мурожаат қилинг.</p>
+      <h2 class="section-title" style="text-align:center" data-i18n="contact_title">Алоқа</h2>
+      <p class="section-desc" data-i18n="contact_desc">Ҳамкорлик ва саволлар бўйича бизга мурожаат қилинг.</p>
       <div class="contact-grid">
-        <div class="contact-box">
-          <h3>AKMALOFF PRODUCT</h3>
-          <p>Ўзбекистон<br>Ишлаб чиқариш ва ҳамкорлик<br>Веб-сайт: akmaloff.uz</p>
-        </div>
-        <div class="contact-box">
-          <h3>Ҳамкорлик</h3>
-          <p>Дистрибьюторлик ва экспорт бўйича мурожаатларингизни кутамиз.</p>
-        </div>
+        <div class="contact-box"><h3>AKMALOFF PRODUCT</h3><p data-i18n="contact_company">Ўзбекистон<br>Ишлаб чиқариш ва ҳамкорлик<br>Веб-сайт: akmaloff.uz</p></div>
+        <div class="contact-box"><h3 data-i18n="contact_partner_title">Ҳамкорлик</h3><p data-i18n="contact_partner_text">Дистрибьюторлик ва экспорт бўйича мурожаатларингизни кутамиз.</p></div>
       </div>
     </div>
   </section>
@@ -386,8 +235,75 @@ footer strong{color:var(--gold-light);letter-spacing:1px}
 
 <footer>
   <strong>AKMALOFF PRODUCT</strong><br>
-  Сифатли маҳсулот. Ишончли танлов.<br>
-  © 2026 AKMALOFF PRODUCT. Барча ҳуқуқлар ҳимояланган.
+  <span data-i18n="footer_slogan">Сифатли маҳсулот. Ишончли танлов.</span><br>
+  <span data-i18n="footer_rights">© 2026 AKMALOFF PRODUCT. Барча ҳуқуқлар ҳимояланган.</span>
 </footer>
+
+<script>
+const translations = {
+  "uz-Cyrl": {
+    nav_about:"Компания",nav_products:"Продукция",nav_quality:"Качество",nav_contact:"Контакт",
+    hero_title:"Сифатли маҳсулот.<br>Ишончли танлов.",hero_text:"Дон маҳсулотлари асосида тайёрланган сифатли озиқ-овқат маҳсулотлари. Ҳар бир оила дастурхони учун меҳр ва эътибор билан.",hero_button:"Маҳсулотларимиз",
+    about_title:"Компания ҳақида",about_desc:"AKMALOFF PRODUCT — сифат, ишонч ва ривожланиш сари.",about_text:"Биз истеъмолчилар учун дон ва озиқ-овқат маҳсулотларини ишлаб чиқарамиз. Мақсадимиз — сифатли маҳсулотларимизни Ўзбекистон ва халқаро бозорларда тақдим этиш ҳамда ишончли ҳамкорликни ривожлантириш.",
+    products_title:"Бизнинг маҳсулотлар",products_desc:"AKMALOFF бренди остидаги 10 хил маҳсулотимиз билан танишинг.",
+    p1_title:"МАША-КАША — қизил буғдойли",p1_desc:"Буғдой асосидаги каша",p2_title:"МАША-КАША — сариқ буғдойли",p2_desc:"Буғдой асосидаги каша",p3_title:"МАША-КАША — гуручли",p3_desc:"Гуруч асосидаги каша",p4_title:"BUNNY — буғдойли каша",p4_desc:"Донли каша маҳсулоти",p5_title:"BUNNY — гуручли каша",p5_desc:"Донли каша маҳсулоти",p6_title:"ОЙИЖОНИМ ҚУЙМОҒИ",p6_desc:"Қуймоқ тайёрлаш учун аралашма",p7_title:"ГЕРКУЛЕС — қизил",p7_desc:"Сули ёрмаси маҳсулоти",p8_title:"ГЕРКУЛЕС — кўк",p8_desc:"Сули ёрмаси маҳсулоти",p9_title:"БОГАТЫРЬ",p9_desc:"Дон маҳсулоти",p10_title:"МАННАЯ",p10_desc:"Манний ёрмаси",
+    quality_title:"Нима учун AKMALOFF?",quality_desc:"Ҳар бир маҳсулотимизда сифат ва ишончга эътибор.",quality_1_title:"СИФАТ",quality_1_text:"Маҳсулотлар сифатини назорат қилишга алоҳида эътибор.",quality_2_title:"ИШОНЧ",quality_2_text:"Мижозлар ва ҳамкорлар билан узоқ муддатли муносабатлар.",quality_3_title:"РИВОЖЛАНИШ",quality_3_text:"Янги бозорлар ва имкониятлар сари ҳаракат.",
+    partner_title:"Бизнинг ҳамкоримиз бўлинг!",partner_text:"Дистрибьюторлар ва улгуржи харидорларни ҳамкорликка таклиф қиламиз.",partner_button:"Биз билан боғланинг",contact_title:"Алоқа",contact_desc:"Ҳамкорлик ва саволлар бўйича бизга мурожаат қилинг.",contact_company:"Ўзбекистон<br>Ишлаб чиқариш ва ҳамкорлик<br>Веб-сайт: akmaloff.uz",contact_partner_title:"Ҳамкорлик",contact_partner_text:"Дистрибьюторлик ва экспорт бўйича мурожаатларингизни кутамиз.",footer_slogan:"Сифатли маҳсулот. Ишончли танлов.",footer_rights:"© 2026 AKMALOFF PRODUCT. Барча ҳуқуқлар ҳимояланган."
+  },
+  "uz-Latn": {
+    nav_about:"Kompaniya",nav_products:"Mahsulotlar",nav_quality:"Sifat",nav_contact:"Aloqa",
+    hero_title:"Sifatli mahsulot.<br>Ishonchli tanlov.",hero_text:"Don mahsulotlari asosida tayyorlangan sifatli oziq-ovqat mahsulotlari. Har bir oila dasturxoni uchun mehr va e’tibor bilan.",hero_button:"Mahsulotlarimiz",
+    about_title:"Kompaniya haqida",about_desc:"AKMALOFF PRODUCT — sifat, ishonch va rivojlanish sari.",about_text:"Biz iste’molchilar uchun don va oziq-ovqat mahsulotlarini ishlab chiqaramiz. Maqsadimiz — sifatli mahsulotlarimizni O‘zbekiston va xalqaro bozorlarda taqdim etish hamda ishonchli hamkorlikni rivojlantirish.",
+    products_title:"Bizning mahsulotlar",products_desc:"AKMALOFF brendi ostidagi 10 xil mahsulotimiz bilan tanishing.",
+    p1_title:"MASHA-KASHA — qizil bug‘doyli",p1_desc:"Bug‘doy asosidagi kasha",p2_title:"MASHA-KASHA — sariq bug‘doyli",p2_desc:"Bug‘doy asosidagi kasha",p3_title:"MASHA-KASHA — guruchli",p3_desc:"Guruch asosidagi kasha",p4_title:"BUNNY — bug‘doyli kasha",p4_desc:"Donli kasha mahsuloti",p5_title:"BUNNY — guruchli kasha",p5_desc:"Donli kasha mahsuloti",p6_title:"OYIJONIM QUYMOG‘I",p6_desc:"Quymoq tayyorlash uchun aralashma",p7_title:"GERKULES — qizil",p7_desc:"Suli yormasi mahsuloti",p8_title:"GERKULES — ko‘k",p8_desc:"Suli yormasi mahsuloti",p9_title:"BOGATYR",p9_desc:"Don mahsuloti",p10_title:"MANNAYA",p10_desc:"Manniy yormasi",
+    quality_title:"Nima uchun AKMALOFF?",quality_desc:"Har bir mahsulotimizda sifat va ishonchga e’tibor.",quality_1_title:"SIFAT",quality_1_text:"Mahsulotlar sifatini nazorat qilishga alohida e’tibor.",quality_2_title:"ISHONCH",quality_2_text:"Mijozlar va hamkorlar bilan uzoq muddatli munosabatlar.",quality_3_title:"RIVOJLANISH",quality_3_text:"Yangi bozorlar va imkoniyatlar sari harakat.",
+    partner_title:"Bizning hamkorimiz bo‘ling!",partner_text:"Distribyutorlar va ulgurji xaridorlarni hamkorlikka taklif qilamiz.",partner_button:"Biz bilan bog‘laning",contact_title:"Aloqa",contact_desc:"Hamkorlik va savollar bo‘yicha bizga murojaat qiling.",contact_company:"O‘zbekiston<br>Ishlab chiqarish va hamkorlik<br>Veb-sayt: akmaloff.uz",contact_partner_title:"Hamkorlik",contact_partner_text:"Distribyutorlik va eksport bo‘yicha murojaatlaringizni kutamiz.",footer_slogan:"Sifatli mahsulot. Ishonchli tanlov.",footer_rights:"© 2026 AKMALOFF PRODUCT. Barcha huquqlar himoyalangan."
+  },
+  "ru": {
+    nav_about:"О компании",nav_products:"Продукция",nav_quality:"Качество",nav_contact:"Контакты",
+    hero_title:"Качественный продукт.<br>Надёжный выбор.",hero_text:"Качественные продукты питания на основе зерновых культур. С заботой и вниманием для стола каждой семьи.",hero_button:"Наша продукция",
+    about_title:"О компании",about_desc:"AKMALOFF PRODUCT — качество, доверие и развитие.",about_text:"Мы производим зерновые и пищевые продукты для потребителей. Наша цель — представлять качественную продукцию на рынках Узбекистана и других стран, развивая надёжное сотрудничество.",
+    products_title:"Наша продукция",products_desc:"Познакомьтесь с 10 видами продукции под брендом AKMALOFF.",
+    p1_title:"МАША-КАША — красная пшеничная",p1_desc:"Каша на основе пшеницы",p2_title:"МАША-КАША — жёлтая пшеничная",p2_desc:"Каша на основе пшеницы",p3_title:"МАША-КАША — рисовая",p3_desc:"Каша на основе риса",p4_title:"BUNNY — пшеничная каша",p4_desc:"Зерновая каша",p5_title:"BUNNY — рисовая каша",p5_desc:"Зерновая каша",p6_title:"ОЙИЖОНИМ — СМЕСЬ ДЛЯ БЛИНОВ",p6_desc:"Смесь для приготовления блинов",p7_title:"ГЕРКУЛЕС — красный",p7_desc:"Продукт из овсяной крупы",p8_title:"ГЕРКУЛЕС — синий",p8_desc:"Продукт из овсяной крупы",p9_title:"БОГАТЫРЬ",p9_desc:"Зерновой продукт",p10_title:"МАННАЯ",p10_desc:"Манная крупа",
+    quality_title:"Почему AKMALOFF?",quality_desc:"Мы уделяем особое внимание качеству и доверию в каждом продукте.",quality_1_title:"КАЧЕСТВО",quality_1_text:"Особое внимание контролю качества продукции.",quality_2_title:"ДОВЕРИЕ",quality_2_text:"Долгосрочные отношения с клиентами и партнёрами.",quality_3_title:"РАЗВИТИЕ",quality_3_text:"Движение к новым рынкам и возможностям.",
+    partner_title:"Станьте нашим партнёром!",partner_text:"Приглашаем дистрибьюторов и оптовых покупателей к сотрудничеству.",partner_button:"Связаться с нами",contact_title:"Контакты",contact_desc:"Свяжитесь с нами по вопросам сотрудничества и другим вопросам.",contact_company:"Узбекистан<br>Производство и сотрудничество<br>Веб-сайт: akmaloff.uz",contact_partner_title:"Сотрудничество",contact_partner_text:"Ждём ваши обращения по вопросам дистрибуции и экспорта.",footer_slogan:"Качественный продукт. Надёжный выбор.",footer_rights:"© 2026 AKMALOFF PRODUCT. Все права защищены."
+  },
+  "en": {
+    nav_about:"About us",nav_products:"Products",nav_quality:"Quality",nav_contact:"Contact",
+    hero_title:"Quality products.<br>A trusted choice.",hero_text:"Quality food products made from grain-based ingredients. Prepared with care and attention for every family’s table.",hero_button:"Our products",
+    about_title:"About the company",about_desc:"AKMALOFF PRODUCT — quality, trust and growth.",about_text:"We produce grain-based and food products for consumers. Our goal is to offer quality products in Uzbekistan and international markets while building reliable partnerships.",
+    products_title:"Our products",products_desc:"Discover 10 products under the AKMALOFF brand.",
+    p1_title:"MASHA-KASHA — red wheat",p1_desc:"Wheat-based porridge",p2_title:"MASHA-KASHA — yellow wheat",p2_desc:"Wheat-based porridge",p3_title:"MASHA-KASHA — rice",p3_desc:"Rice-based porridge",p4_title:"BUNNY — wheat porridge",p4_desc:"Grain porridge product",p5_title:"BUNNY — rice porridge",p5_desc:"Grain porridge product",p6_title:"OYIJONIM PANCAKE MIX",p6_desc:"Mix for making pancakes",p7_title:"GERKULES — red",p7_desc:"Oat product",p8_title:"GERKULES — blue",p8_desc:"Oat product",p9_title:"BOGATYR",p9_desc:"Grain product",p10_title:"MANNAYA",p10_desc:"Semolina",
+    quality_title:"Why AKMALOFF?",quality_desc:"We pay special attention to quality and trust in every product.",quality_1_title:"QUALITY",quality_1_text:"Special attention to product quality control.",quality_2_title:"TRUST",quality_2_text:"Long-term relationships with customers and partners.",quality_3_title:"GROWTH",quality_3_text:"Moving towards new markets and opportunities.",
+    partner_title:"Become our partner!",partner_text:"We invite distributors and wholesale buyers to cooperate with us.",partner_button:"Contact us",contact_title:"Contact",contact_desc:"Get in touch with us for partnership enquiries and other questions.",contact_company:"Uzbekistan<br>Manufacturing and partnerships<br>Website: akmaloff.uz",contact_partner_title:"Partnership",contact_partner_text:"We welcome enquiries about distribution and export.",footer_slogan:"Quality products. A trusted choice.",footer_rights:"© 2026 AKMALOFF PRODUCT. All rights reserved."
+  }
+};
+
+function setLanguage(language){
+  const dictionary = translations[language] || translations["uz-Cyrl"];
+  document.querySelectorAll("[data-i18n]").forEach(element=>{
+    const key = element.getAttribute("data-i18n");
+    if(Object.prototype.hasOwnProperty.call(dictionary,key)){
+      element.innerHTML = dictionary[key];
+    }
+  });
+  document.documentElement.lang = language;
+  document.querySelectorAll(".language-switch button").forEach(button=>{
+    const selected = button.dataset.lang === language;
+    button.classList.toggle("active",selected);
+    button.setAttribute("aria-pressed",selected ? "true" : "false");
+  });
+  try{localStorage.setItem("akmaloff-language",language)}catch(error){}
+}
+document.querySelectorAll(".language-switch button").forEach(button=>{
+  button.addEventListener("click",()=>setLanguage(button.dataset.lang));
+});
+let savedLanguage = "uz-Cyrl";
+try{
+  const storedLanguage = localStorage.getItem("akmaloff-language");
+  if(storedLanguage && translations[storedLanguage]) savedLanguage = storedLanguage;
+}catch(error){}
+setLanguage(savedLanguage);
+</script>
 </body>
 </html>
