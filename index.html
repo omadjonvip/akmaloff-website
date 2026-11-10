@@ -44,7 +44,9 @@
   },
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "UZ"
+    "addressCountry": "UZ",
+    "addressRegion": "Andijan Region",
+    "addressLocality": "Andijan"
   }
 }
 </script>
@@ -60,6 +62,12 @@ html{scroll-behavior:smooth;scroll-padding-top:120px}
 body{font-family:"Manrope","Noto Sans",Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
 button{font:inherit}
+html[lang="ps"] body{direction:rtl;font-family:"Noto Sans","Manrope",Arial,sans-serif}
+html[lang="ps"] .header-inner,html[lang="ps"] .header-right,html[lang="ps"] nav{direction:rtl}
+html[lang="ps"] .hero-content,html[lang="ps"] .contact-box,html[lang="ps"] .about-text{text-align:right}
+html[lang="ps"] .section-desc{text-align:center}
+.contact-box a{color:var(--green-2);font-weight:800;white-space:nowrap}
+.contact-box a:hover{text-decoration:underline}
 .container{width:min(1160px,88%);margin:0 auto}
 
 /* HEADER */
@@ -122,6 +130,13 @@ section{padding:82px 0}
 .contact-box{background:var(--cream);padding:28px;border-radius:12px;border:1px solid var(--line)}
 .contact-box h3{color:#293d2e;margin-bottom:13px}
 .contact-box p{color:#667067;line-height:2;font-size:14px}
+.social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.social-links a{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border:1px solid #e5dfd1;border-radius:9px;background:#fff;color:var(--green);font-size:13px;font-weight:800;transition:.2s}
+.social-links a:hover{border-color:var(--gold);background:#fbf7ee;transform:translateY(-2px)}
+.contact-phones{display:inline-flex;align-items:center;gap:14px;white-space:nowrap}
+.contact-phones a{display:inline-block;white-space:nowrap}
+.contact-address{color:var(--green-2);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px;font-weight:700}
+@media(max-width:600px){.contact-phones{gap:9px;font-size:11px;letter-spacing:-.25px}}
 footer{background:#17271d;color:#dce3dc;text-align:center;padding:30px 15px;font-size:13px;line-height:2}
 footer strong{color:var(--gold-light);letter-spacing:1px}
 
@@ -200,6 +215,7 @@ footer strong{color:var(--gold-light);letter-spacing:1px}
         <button type="button" data-lang="uz-Latn" aria-label="O‘zbekcha lotin">O‘Z</button>
         <button type="button" data-lang="ru" aria-label="Русский">RU</button>
         <button type="button" data-lang="en" aria-label="English">EN</button>
+        <button type="button" data-lang="ps" aria-label="پښتو">AFG</button>
       </div>
     </div>
   </div>
@@ -230,7 +246,7 @@ footer strong{color:var(--gold-light);letter-spacing:1px}
       <div class="products">
       <article class="product"><div class="product-visual"><img src="masha-kasha-qizil.png.PNG" alt="AKMALOFF MASHA-KASHA qizil bug'doyli" style="width:100%;height:100%;min-height:185px;object-fit:contain;padding:10px;background:#fff;"></div><h3 data-i18n="p1_title">МАША-КАША — қизил буғдойли</h3><p data-i18n="p1_desc">Буғдой асосидаги каша</p><span class="product-number">01</span></article>
       <article class="product"><div class="product-visual"><img src="masha-kasha-sariq.PNG"  alt="AKMALOFF MASHA-KASHA sariq bug'doyli" style="width:100%;height:100%;min-height:185px;object-fit:contain;padding:10px;background:#fff;"></div><h3 data-i18n="p2_title">МАША-КАША — сариқ буғдойли</h3><p data-i18n="p2_desc">Буғдой асосидаги каша</p><span class="product-number">02</span></article>  
-      <article class="product"><div class="product-visual"><img src="masha-kasha-guruch.png.PNG"alt="AKMALOFF MASHA-KASHA guruchli"style="width:100%;height:100%;min-height:185px;object-fit:contain;padding:10px;background:#fff;"></div><h3>МАША-КАША — гуручли кўк</h3><p>Гуруч асосидаги каша</p><span class="product-number">03</span></article>
+      <article class="product"><div class="product-visual"><img src="masha-kasha-guruch.png.PNG"alt="AKMALOFF MASHA-KASHA guruchli"style="width:100%;height:100%;min-height:185px;object-fit:contain;padding:10px;background:#fff;"></div><h3 data-i18n="p3_title">МАША-КАША — гуручли кўк</h3><p data-i18n="p3_desc">Гуруч асосидаги каша</p><span class="product-number">03</span></article>
       <article class="product"><div class="product-visual"><img src="bunny-bugdoyli.PNG" alt="AKMALOFF BUNNY bug'doyli"style="width:100%;height:100%;min-height:185px;object-fit:contain;padding:10px;background:#fff;"></div><h3 data-i18n="p4_title">BUNNY — буғдойли каша</h3><p data-i18n="p4_desc">Донли каша маҳсулоти</p><span class="product-number">04</span></article>
       <article class="product"><div class="product-visual"><img src="bunny-guruchli.PNG" alt="AKMALOFF BUNNY guruchli"style="width:100%;height:100%;min-height:185px;object-fit:contain;padding:10px;background:#fff;"></div><h3 data-i18n="p5_title">BUNNY — гуручли каша</h3><p data-i18n="p5_desc">Гуруч асосидаги каша маҳсулоти</p><span class="product-number">05</span></article>
       <article class="product"><div class="product-visual"><img src="oyijonim-quymogi.PNG" alt="AKMALOFF Oyijonim quymogi"style="width:100%;height:100%;min-height:185px;object-fit:contain;padding:10px;background:#fff;"></div><h3 data-i18n="p6_title">ОЙИЖОНИМ ҚУЙМОҒИ</h3><p data-i18n="p6_desc">Қуймоқ тайёрлаш учун қуруқ аралашма</p><span class="product-number">06</span></article>
@@ -268,8 +284,14 @@ footer strong{color:var(--gold-light);letter-spacing:1px}
       <h2 class="section-title" style="text-align:center" data-i18n="contact_title">Алоқа</h2>
       <p class="section-desc" data-i18n="contact_desc">Ҳамкорлик ва саволлар бўйича бизга мурожаат қилинг.</p>
       <div class="contact-grid">
-        <div class="contact-box"><h3>AKMALOFF PRODUCT</h3><p data-i18n="contact_company">Ўзбекистон<br>Ишлаб чиқариш ва ҳамкорлик<br>Веб-сайт: akmaloff.uz</p></div>
+        <div class="contact-box"><h3>AKMALOFF PRODUCT</h3><p data-i18n="contact_company">Ўзбекистон<br><a class=\"contact-address\" href=\"https://yandex.uz/web-maps/-/CXCnzWJT\" target=\"_blank\" rel=\"noopener noreferrer\">Андижон вилояти, Андижон шаҳри ↗</a><br>Телефон: <span class=\"contact-phones\"><a href=\"tel:+998902564070\">+998 90 256 40 70</a><a href=\"tel:+998901700060\">+998 90 170 00 60</a></span><br>Веб-сайт: akmaloff.uz</p></div>
         <div class="contact-box"><h3 data-i18n="contact_partner_title">Ҳамкорлик</h3><p data-i18n="contact_partner_text">Дистрибьюторлик ва экспорт бўйича мурожаатларингизни кутамиз.</p></div>
+        <div class="contact-box"><h3 data-i18n="social_title">Ижтимоий тармоқлар</h3><div class="social-links">
+          <a href="https://www.instagram.com/akmaloff_product" target="_blank" rel="noopener noreferrer">Instagram · Uzbekistan ↗</a>
+          <a href="https://www.instagram.com/akmaloff_product.afg" target="_blank" rel="noopener noreferrer">Instagram · Afghanistan ↗</a>
+          <a href="https://t.me/Akmaloff_product" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+          <a href="https://youtube.com/@akmaloff.product?si=dtI-BuyAJYL2w_m1" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+        </div></div>
       </div>
     </div>
   </section>
@@ -290,7 +312,7 @@ const translations = {
     products_title:"Бизнинг маҳсулотлар",products_desc:"AKMALOFF бренди остидаги 10 хил маҳсулотимиз билан танишинг.",
     p1_title:"МАША-КАША — қизил буғдойли",p1_desc:"Буғдой асосидаги каша",p2_title:"МАША-КАША — сариқ буғдойли",p2_desc:"Буғдой асосидаги каша",p3_title:"МАША-КАША — гуручли",p3_desc:"Гуруч асосидаги каша",p4_title:"BUNNY — буғдойли каша",p4_desc:"Донли каша маҳсулоти",p5_title:"BUNNY — гуручли каша",p5_desc:"Донли каша маҳсулоти",p6_title:"ОЙИЖОНИМ ҚУЙМОҒИ",p6_desc:"Қуймоқ тайёрлаш учун аралашма",p7_title:"ГЕРКУЛЕС — қизил",p7_desc:"Сули ёрмаси маҳсулоти",p8_title:"ГЕРКУЛЕС — кўк",p8_desc:"Сули ёрмаси маҳсулоти",p9_title:"БОГАТЫРЬ",p9_desc:"Дон маҳсулоти",p10_title:"МАННАЯ",p10_desc:"Манний ёрмаси",
     quality_title:"Нима учун AKMALOFF?",quality_desc:"Ҳар бир маҳсулотимизда сифат ва ишончга эътибор.",quality_1_title:"СИФАТ",quality_1_text:"Маҳсулотлар сифатини назорат қилишга алоҳида эътибор.",quality_2_title:"ИШОНЧ",quality_2_text:"Мижозлар ва ҳамкорлар билан узоқ муддатли муносабатлар.",quality_3_title:"РИВОЖЛАНИШ",quality_3_text:"Янги бозорлар ва имкониятлар сари ҳаракат.",
-    partner_title:"Бизнинг ҳамкоримиз бўлинг!",partner_text:"Дистрибьюторлар ва улгуржи харидорларни ҳамкорликка таклиф қиламиз.",partner_button:"Биз билан боғланинг",contact_title:"Алоқа",contact_desc:"Ҳамкорлик ва саволлар бўйича бизга мурожаат қилинг.",contact_company:"Ўзбекистон<br>Ишлаб чиқариш ва ҳамкорлик<br>Веб-сайт: akmaloff.uz",contact_partner_title:"Ҳамкорлик",contact_partner_text:"Дистрибьюторлик ва экспорт бўйича мурожаатларингизни кутамиз.",footer_slogan:"Сифатли маҳсулот. Ишончли танлов.",footer_rights:"© 2026 AKMALOFF PRODUCT. Барча ҳуқуқлар ҳимояланган."
+    partner_title:"Бизнинг ҳамкоримиз бўлинг!",partner_text:"Дистрибьюторлар ва улгуржи харидорларни ҳамкорликка таклиф қиламиз.",partner_button:"Биз билан боғланинг",contact_title:"Алоқа",contact_desc:"Ҳамкорлик ва саволлар бўйича бизга мурожаат қилинг.",contact_company:"Ўзбекистон<br><a class=\"contact-address\" href=\"https://yandex.uz/web-maps/-/CXCnzWJT\" target=\"_blank\" rel=\"noopener noreferrer\">Андижон вилояти, Андижон шаҳри ↗</a><br>Телефон: <span class=\"contact-phones\"><a href=\"tel:+998902564070\">+998 90 256 40 70</a><a href=\"tel:+998901700060\">+998 90 170 00 60</a></span><br>Веб-сайт: akmaloff.uz",contact_partner_title:"Ҳамкорлик",contact_partner_text:"Дистрибьюторлик ва экспорт бўйича мурожаатларингизни кутамиз.",social_title:"Ижтимоий тармоқлар",footer_slogan:"Сифатли маҳсулот. Ишончли танлов.",footer_rights:"© 2026 AKMALOFF PRODUCT. Барча ҳуқуқлар ҳимояланган."
   },
   "uz-Latn": {
     nav_about:"Kompaniya",nav_products:"Mahsulotlar",nav_quality:"Sifat",nav_contact:"Aloqa",
@@ -299,7 +321,7 @@ const translations = {
     products_title:"Bizning mahsulotlar",products_desc:"AKMALOFF brendi ostidagi 10 xil mahsulotimiz bilan tanishing.",
     p1_title:"MASHA-KASHA — qizil bug‘doyli",p1_desc:"Bug‘doy asosidagi kasha",p2_title:"MASHA-KASHA — sariq bug‘doyli",p2_desc:"Bug‘doy asosidagi kasha",p3_title:"MASHA-KASHA — guruchli",p3_desc:"Guruch asosidagi kasha",p4_title:"BUNNY — bug‘doyli kasha",p4_desc:"Donli kasha mahsuloti",p5_title:"BUNNY — guruchli kasha",p5_desc:"Donli kasha mahsuloti",p6_title:"OYIJONIM QUYMOG‘I",p6_desc:"Quymoq tayyorlash uchun aralashma",p7_title:"GERKULES — qizil",p7_desc:"Suli yormasi mahsuloti",p8_title:"GERKULES — ko‘k",p8_desc:"Suli yormasi mahsuloti",p9_title:"BOGATYR",p9_desc:"Don mahsuloti",p10_title:"MANNAYA",p10_desc:"Manniy yormasi",
     quality_title:"Nima uchun AKMALOFF?",quality_desc:"Har bir mahsulotimizda sifat va ishonchga e’tibor.",quality_1_title:"SIFAT",quality_1_text:"Mahsulotlar sifatini nazorat qilishga alohida e’tibor.",quality_2_title:"ISHONCH",quality_2_text:"Mijozlar va hamkorlar bilan uzoq muddatli munosabatlar.",quality_3_title:"RIVOJLANISH",quality_3_text:"Yangi bozorlar va imkoniyatlar sari harakat.",
-    partner_title:"Bizning hamkorimiz bo‘ling!",partner_text:"Distribyutorlar va ulgurji xaridorlarni hamkorlikka taklif qilamiz.",partner_button:"Biz bilan bog‘laning",contact_title:"Aloqa",contact_desc:"Hamkorlik va savollar bo‘yicha bizga murojaat qiling.",contact_company:"O‘zbekiston<br>Ishlab chiqarish va hamkorlik<br>Veb-sayt: akmaloff.uz",contact_partner_title:"Hamkorlik",contact_partner_text:"Distribyutorlik va eksport bo‘yicha murojaatlaringizni kutamiz.",footer_slogan:"Sifatli mahsulot. Ishonchli tanlov.",footer_rights:"© 2026 AKMALOFF PRODUCT. Barcha huquqlar himoyalangan."
+    partner_title:"Bizning hamkorimiz bo‘ling!",partner_text:"Distribyutorlar va ulgurji xaridorlarni hamkorlikka taklif qilamiz.",partner_button:"Biz bilan bog‘laning",contact_title:"Aloqa",contact_desc:"Hamkorlik va savollar bo‘yicha bizga murojaat qiling.",contact_company:"O‘zbekiston<br><a class=\"contact-address\" href=\"https://yandex.uz/web-maps/-/CXCnzWJT\" target=\"_blank\" rel=\"noopener noreferrer\">Andijon viloyati, Andijon shahri ↗</a><br>Telefon: <span class=\"contact-phones\"><a href=\"tel:+998902564070\">+998 90 256 40 70</a><a href=\"tel:+998901700060\">+998 90 170 00 60</a></span><br>Veb-sayt: akmaloff.uz",contact_partner_title:"Hamkorlik",contact_partner_text:"Distribyutorlik va eksport bo‘yicha murojaatlaringizni kutamiz.",social_title:"Ijtimoiy tarmoqlar",footer_slogan:"Sifatli mahsulot. Ishonchli tanlov.",footer_rights:"© 2026 AKMALOFF PRODUCT. Barcha huquqlar himoyalangan."
   },
   "ru": {
     nav_about:"О компании",nav_products:"Продукция",nav_quality:"Качество",nav_contact:"Контакты",
@@ -308,7 +330,16 @@ const translations = {
     products_title:"Наша продукция",products_desc:"Познакомьтесь с 10 видами продукции под брендом AKMALOFF.",
     p1_title:"МАША-КАША — красная пшеничная",p1_desc:"Каша на основе пшеницы",p2_title:"МАША-КАША — жёлтая пшеничная",p2_desc:"Каша на основе пшеницы",p3_title:"МАША-КАША — рисовая",p3_desc:"Каша на основе риса",p4_title:"BUNNY — пшеничная каша",p4_desc:"Зерновая каша",p5_title:"BUNNY — рисовая каша",p5_desc:"Зерновая каша",p6_title:"ОЙИЖОНИМ — СМЕСЬ ДЛЯ БЛИНОВ",p6_desc:"Смесь для приготовления блинов",p7_title:"ГЕРКУЛЕС — красный",p7_desc:"Продукт из овсяной крупы",p8_title:"ГЕРКУЛЕС — синий",p8_desc:"Продукт из овсяной крупы",p9_title:"БОГАТЫРЬ",p9_desc:"Зерновой продукт",p10_title:"МАННАЯ",p10_desc:"Манная крупа",
     quality_title:"Почему AKMALOFF?",quality_desc:"Мы уделяем особое внимание качеству и доверию в каждом продукте.",quality_1_title:"КАЧЕСТВО",quality_1_text:"Особое внимание контролю качества продукции.",quality_2_title:"ДОВЕРИЕ",quality_2_text:"Долгосрочные отношения с клиентами и партнёрами.",quality_3_title:"РАЗВИТИЕ",quality_3_text:"Движение к новым рынкам и возможностям.",
-    partner_title:"Станьте нашим партнёром!",partner_text:"Приглашаем дистрибьюторов и оптовых покупателей к сотрудничеству.",partner_button:"Связаться с нами",contact_title:"Контакты",contact_desc:"Свяжитесь с нами по вопросам сотрудничества и другим вопросам.",contact_company:"Узбекистан<br>Производство и сотрудничество<br>Веб-сайт: akmaloff.uz",contact_partner_title:"Сотрудничество",contact_partner_text:"Ждём ваши обращения по вопросам дистрибуции и экспорта.",footer_slogan:"Качественный продукт. Надёжный выбор.",footer_rights:"© 2026 AKMALOFF PRODUCT. Все права защищены."
+    partner_title:"Станьте нашим партнёром!",partner_text:"Приглашаем дистрибьюторов и оптовых покупателей к сотрудничеству.",partner_button:"Связаться с нами",contact_title:"Контакты",contact_desc:"Свяжитесь с нами по вопросам сотрудничества и другим вопросам.",contact_company:"Узбекистан<br><a class=\"contact-address\" href=\"https://yandex.uz/web-maps/-/CXCnzWJT\" target=\"_blank\" rel=\"noopener noreferrer\">Андижанская область, город Андижан ↗</a><br>Телефон: <span class=\"contact-phones\"><a href=\"tel:+998902564070\">+998 90 256 40 70</a><a href=\"tel:+998901700060\">+998 90 170 00 60</a></span><br>Веб-сайт: akmaloff.uz",contact_partner_title:"Сотрудничество",contact_partner_text:"Ждём ваши обращения по вопросам дистрибуции и экспорта.",social_title:"Социальные сети",footer_slogan:"Качественный продукт. Надёжный выбор.",footer_rights:"© 2026 AKMALOFF PRODUCT. Все права защищены."
+  },
+  "ps": {
+    nav_about:"زموږ په اړه",nav_products:"زموږ محصولات",nav_quality:"کیفیت",nav_contact:"اړیکه",
+    hero_title:"کیفیت لرونکي محصولات.<br>د باور وړ انتخاب.",hero_text:"د غلو دانو پر بنسټ جوړ شوي باکیفیته خوراکي محصولات. د هرې کورنۍ د دسترخوان لپاره په مینه او پاملرنه چمتو شوي.",hero_button:"زموږ محصولات",
+    about_title:"د شرکت په اړه",about_desc:"AKMALOFF PRODUCT — کیفیت، باور او پرمختګ.",about_text:"موږ د مصرف کوونکو لپاره د غلو دانو او خوراکي توکو محصولات تولیدوو. زموږ موخه دا ده چې خپل باکیفیته محصولات د ازبکستان او نړیوالو بازارونو ته وړاندې کړو او باوري همکاري پراخه کړو.",
+    products_title:"زموږ محصولات",products_desc:"د AKMALOFF تر برانډ لاندې زموږ له ۱۰ ډوله محصولاتو سره بلد شئ.",
+    p1_title:"МАША-КАША — سره غنم",p1_desc:"د غنمو پر بنسټ кашه",p2_title:"МАША-КАША — ژېړ غنم",p2_desc:"د غنمو پر بنسټ кашه",p3_title:"МАША-КАША — د وریجو",p3_desc:"د وریجو پر بنسټ кашه",p4_title:"BUNNY — د غنمو кашه",p4_desc:"د غلو دانو кашه",p5_title:"BUNNY — د وریجو кашه",p5_desc:"د غلو دانو кашه",p6_title:"ОЙИЖОНИМ ҚУЙМОҒИ",p6_desc:"د پنکېک د جوړولو وچ مخلوط",p7_title:"ГЕРКУЛЕС — سور",p7_desc:"د اوټس محصول",p8_title:"ГЕРКУЛЕС — شین",p8_desc:"د اوټس محصول",p9_title:"БОГАТЫРЬ",p9_desc:"د غلو دانو محصول",p10_title:"МАННАЯ",p10_desc:"د سیمولینا غله",
+    quality_title:"ولې AKMALOFF؟",quality_desc:"موږ په هر محصول کې کیفیت او باور ته ځانګړې پاملرنه کوو.",quality_1_title:"کیفیت",quality_1_text:"د محصولاتو د کیفیت کنټرول ته ځانګړې پاملرنه.",quality_2_title:"باور",quality_2_text:"له پېرودونکو او همکارانو سره اوږدمهاله اړیکې.",quality_3_title:"پرمختګ",quality_3_text:"د نویو بازارونو او فرصتونو پر لور حرکت.",
+    partner_title:"زموږ شریک شئ!",partner_text:"وېشونکو او عمده پېرودونکو ته د همکارۍ بلنه ورکوو.",partner_button:"له موږ سره اړیکه ونیسئ",contact_title:"اړیکه",contact_desc:"د همکارۍ او پوښتنو لپاره له موږ سره اړیکه ونیسئ.",contact_company:"ازبکستان<br><a class=\"contact-address\" href=\"https://yandex.uz/web-maps/-/CXCnzWJT\" target=\"_blank\" rel=\"noopener noreferrer\">د اندیجان ولایت، د اندیجان ښار ↗</a><br>ټیلیفون: <span class=\"contact-phones\"><a href=\"tel:+998902564070\">+998 90 256 40 70</a><a href=\"tel:+998901700060\">+998 90 170 00 60</a></span><br>وېب‌سایټ: akmaloff.uz",contact_partner_title:"همکاري",contact_partner_text:"د وېش او صادراتو په اړه ستاسو غوښتنو ته په تمه یو.",social_title:"ټولنیزې رسنۍ",footer_slogan:"کیفیت لرونکي محصولات. د باور وړ انتخاب.",footer_rights:"© 2026 AKMALOFF PRODUCT. ټول حقوق خوندي دي."
   },
   "en": {
     nav_about:"About us",nav_products:"Products",nav_quality:"Quality",nav_contact:"Contact",
@@ -317,7 +348,7 @@ const translations = {
     products_title:"Our products",products_desc:"Discover 10 products under the AKMALOFF brand.",
     p1_title:"MASHA-KASHA — red wheat",p1_desc:"Wheat-based porridge",p2_title:"MASHA-KASHA — yellow wheat",p2_desc:"Wheat-based porridge",p3_title:"MASHA-KASHA — rice",p3_desc:"Rice-based porridge",p4_title:"BUNNY — wheat porridge",p4_desc:"Grain porridge product",p5_title:"BUNNY — rice porridge",p5_desc:"Grain porridge product",p6_title:"OYIJONIM PANCAKE MIX",p6_desc:"Mix for making pancakes",p7_title:"GERKULES — red",p7_desc:"Oat product",p8_title:"GERKULES — blue",p8_desc:"Oat product",p9_title:"BOGATYR",p9_desc:"Grain product",p10_title:"MANNAYA",p10_desc:"Semolina",
     quality_title:"Why AKMALOFF?",quality_desc:"We pay special attention to quality and trust in every product.",quality_1_title:"QUALITY",quality_1_text:"Special attention to product quality control.",quality_2_title:"TRUST",quality_2_text:"Long-term relationships with customers and partners.",quality_3_title:"GROWTH",quality_3_text:"Moving towards new markets and opportunities.",
-    partner_title:"Become our partner!",partner_text:"We invite distributors and wholesale buyers to cooperate with us.",partner_button:"Contact us",contact_title:"Contact",contact_desc:"Get in touch with us for partnership enquiries and other questions.",contact_company:"Uzbekistan<br>Manufacturing and partnerships<br>Website: akmaloff.uz",contact_partner_title:"Partnership",contact_partner_text:"We welcome enquiries about distribution and export.",footer_slogan:"Quality products. A trusted choice.",footer_rights:"© 2026 AKMALOFF PRODUCT. All rights reserved."
+    partner_title:"Become our partner!",partner_text:"We invite distributors and wholesale buyers to cooperate with us.",partner_button:"Contact us",contact_title:"Contact",contact_desc:"Get in touch with us for partnership enquiries and other questions.",contact_company:"Uzbekistan<br><a class=\"contact-address\" href=\"https://yandex.uz/web-maps/-/CXCnzWJT\" target=\"_blank\" rel=\"noopener noreferrer\">Andijan Region, Andijan city ↗</a><br>Phone: <span class=\"contact-phones\"><a href=\"tel:+998902564070\">+998 90 256 40 70</a><a href=\"tel:+998901700060\">+998 90 170 00 60</a></span><br>Website: akmaloff.uz",contact_partner_title:"Partnership",contact_partner_text:"We welcome enquiries about distribution and export.",social_title:"Social media",footer_slogan:"Quality products. A trusted choice.",footer_rights:"© 2026 AKMALOFF PRODUCT. All rights reserved."
   }
 };
 
